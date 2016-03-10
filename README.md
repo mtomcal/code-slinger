@@ -10,7 +10,7 @@ Get your React project up and running in 10 seconds with Webpack hot reloading. 
 
 10 second method:
 
-```javascript
+```bash
 mkdir react-project
 cd react-project
 npm install -g code-slinger
@@ -38,6 +38,13 @@ You get this file structure:
 
 Thats it!
 
+Need a production build?
+
+```bash
+# Bundle is dropped in dist/
+code-slinger build
+```
+
 ## Deeper usage
 
 ```bash
@@ -60,6 +67,7 @@ Add this to package.json
 // ...
 "scripts": {
   "start": "code-slinger react-server",
+  "build": "code-slinger build"
 },
 // ...
 ```
@@ -71,6 +79,31 @@ npm start
 ```
 
 Visit localhost:8000.
+
+
+Want to run a production bundle build?
+
+```bash
+# Bundle is dropped in dist/
+npm run build
+```
+
+## CLI Help
+
+```
+Usage: code-slinger <command> [options]
+
+Commands:
+  bootstrap     Generate files for running a React project
+  react-server  Run the hot reloading development server for your project on
+                localhost:8000
+  build         Bundle and export your React app to dist/bundle.js
+
+Options:
+  -h, --help  Show help                                                [boolean]
+
+MIT License. Lead Maintainer: Michael A Tomcal @matomcal 2016
+```
 
 ## Libraries Used
 

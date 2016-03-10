@@ -11,4 +11,7 @@ npm start
 # bootstrap and react-server work.
 
 npm test
+
+# Test production bundling
+npm run build
 ```
