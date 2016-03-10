@@ -1,0 +1,13 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm install ../ && code-slinger react-server",
+    "clean": "rm .* || : && rm index.html || : && rm -r src || : && rm -r dist || :",
+    "start": "npm run clean && ../app.js bootstrap && ../app.js react-server"
+  },
+  "author": "Michael A Tomcal <michael@twoeyetech.com> (https://github.com/mtomcal)",
+  "license": "ISC"
+}
