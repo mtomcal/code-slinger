@@ -33,8 +33,7 @@ export class App extends Component {
       <div>
           <h1>Welcome to Code Slinger Boilerplate</h1>
           <p>
-              Based on
-              <a href="https://github.com/gaearon/react-transform-boilerplate">
+              Based on <a href="https://github.com/gaearon/react-transform-boilerplate">
                   Dan Abramov's React Transform Boilerplate
               </a>
           </p>
