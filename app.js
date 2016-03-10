@@ -2,6 +2,7 @@
 var Rx = require('rxjs');
 var lib = require('./lib');
 
+// Use yargs to build as a CLI interface with documentation
 var argv = require('yargs')
     .usage('Usage: $0 <command> [options]')
     .command('bootstrap', 'Generate files for running a React project')
@@ -13,9 +14,11 @@ var argv = require('yargs')
     .epilog('MIT License. Lead Maintainer: Michael A Tomcal @matomcal 2016')
     .argv;
 
+// Create a stream from argv._ commands array
 var argStream = Rx.Observable.fromArray(argv._);
 
 var serverStream = argStream
+    // Filter out commands with react-server
     .filter(function (arg) {
         return arg === 'react-server';
     })
@@ -24,6 +27,7 @@ var serverStream = argStream
 lib.reactServer(serverStream);
 
 var bootstrapStream = argStream
+    // Filter out commands with bootstrap
     .filter(function (arg) {
         return arg === 'bootstrap';
     })
