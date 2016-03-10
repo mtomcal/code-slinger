@@ -4,7 +4,9 @@ var lib = require('./lib');
 
 var argv = require('yargs')
     .usage('Usage: $0 <command> [options]')
-    .command('react-server')
+    .command('bootstrap', 'Generate files for running a React project')
+    .demand(1)
+    .command('react-server', 'Run the hot reloading development server for your project on localhost:8000')
     .demand(1)
     .help('h')
     .alias('h', 'help')
