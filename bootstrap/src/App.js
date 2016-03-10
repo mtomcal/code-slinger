@@ -21,7 +21,7 @@ class Counter extends Component {
   render() {
     return (
       <h1 style={{ color: this.props.color }}>
-        Counter ({this.props.increment}): {this.state.counter}
+          Counter ({this.props.increment}): {this.state.counter}
       </h1>
     );
   }
@@ -31,8 +31,15 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <Counter increment={1} color={NICE} />
-        <Counter increment={5} color={SUPER_NICE} />
+          <h1>Welcome to Code Slinger Boilerplate</h1>
+          <p>
+              Based on
+              <a href="https://github.com/gaearon/react-transform-boilerplate">
+                  Dan Abramov's React Transform Boilerplate
+              </a>
+          </p>
+          <Counter increment={1} color={NICE} />
+          <Counter increment={5} color={SUPER_NICE} />
       </div>
     );
   }
