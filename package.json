@@ -1,37 +1,45 @@
 {
-  "name": "code-slinger",
-  "version": "1.0.0",
-  "description": "Install and build your front end",
-  "main": "app.js",
-  "bin": {
-    "code-slinger": "app.js"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Michael A Tomcal <michael@twoeyetech.com> (https://github.com/mtomcal)",
-  "license": "MIT",
-  "dependencies": {
-    "babel-core": "^6.6.5",
-    "babel-eslint": "^5.0.0-beta4",
-    "babel-loader": "^6.2.4",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-preset-react": "^6.3.13",
-    "babel-preset-react-hmre": "^1.1.1",
-    "cross-env": "^1.0.7",
-    "eslint": "^1.10.3",
-    "eslint-plugin-babel": "^3.0.0",
-    "eslint-plugin-react": "^3.11.3",
-    "eventsource-polyfill": "^0.9.6",
-    "express": "^4.13.3",
-    "fs-extra": "^0.26.5",
-    "react": "^0.14.7",
-    "react-dom": "^0.14.7",
-    "rimraf": "^2.4.3",
-    "rxjs": "^5.0.0-beta.2",
-    "webpack": "^1.12.9",
-    "webpack-dev-middleware": "^1.4.0",
-    "webpack-hot-middleware": "^2.9.1",
-    "yargs": "^4.2.0"
-  }
+    "name": "code-slinger",
+    "version": "1.0.0",
+    "description": "Get your React project up and running in 10 seconds with Webpack hot reloading. Boilerplate code is based on Dan Abramov's React Transform Boilerplate.",
+    "main": "app.js",
+    "bin": {
+        "code-slinger": "app.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type" : "git",
+        "url" : "https://github.com/mtomcal/code-slinger.git"
+    },
+    "keywords": ["react", "scaffold", "webpack", "bootstrap", "cli", "hot", "reloading", "transform"],
+    "author": "Michael A Tomcal <michael@twoeyetech.com> (https://github.com/mtomcal)",
+    "license": "MIT",
+    "dependencies": {
+        "babel-core": "^6.6.5",
+        "babel-eslint": "^5.0.0-beta4",
+        "babel-loader": "^6.2.4",
+        "babel-preset-es2015": "^6.3.13",
+        "babel-preset-react": "^6.3.13",
+        "babel-preset-react-hmre": "^1.1.1",
+        "cross-env": "^1.0.7",
+        "eslint": "^1.10.3",
+        "eslint-plugin-babel": "^3.0.0",
+        "eslint-plugin-react": "^3.11.3",
+        "eventsource-polyfill": "^0.9.6",
+        "express": "^4.13.3",
+        "fs-extra": "^0.26.5",
+        "react": "^0.14.7",
+        "react-dom": "^0.14.7",
+        "rimraf": "^2.4.3",
+        "rxjs": "^5.0.0-beta.2",
+        "webpack": "^1.12.9",
+        "webpack-dev-middleware": "^1.4.0",
+        "webpack-hot-middleware": "^2.9.1",
+        "yargs": "^4.2.0"
+    },
+    "engines": {
+        "node": ">=4"
+    }
 }
