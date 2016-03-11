@@ -2,14 +2,6 @@
 
 Get your React project up and running in 10 seconds with Webpack hot reloading. Boilerplate code is based on Dan Abramov's [React Transform Boilerplate](https://github.com/gaearon/react-transform-boilerplate).
 
-## Changelog
-*v1.1.1*
-* Bug fix for cannot find module when looking for config.webpack.js
-
-*v1.1.0*
-* Added convention for a user supplying their own config.webpack.js
-* Added code-slinger gen-webpack command to generate a webpack file
-
 ## Basic Usage
 
 10 second method:
@@ -122,6 +114,18 @@ Primary libraries used:
 * Babel 6
 
 ...see package.json for more supporting libraries
+
+## Changelog
+
+*v1.1.2*
+* User supplied config.webpack.js works with `code-slinger build` now.
+
+*v1.1.1*
+* Bug fix for cannot find module when looking for config.webpack.js
+
+*v1.1.0*
+* Added convention for a user supplying their own config.webpack.js
+* Added code-slinger gen-webpack command to generate a webpack file
 
 ## Contributing
 
