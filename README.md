@@ -2,17 +2,17 @@
 
 Get your React project up and running in 10 seconds with Webpack hot reloading. Boilerplate code is based on Dan Abramov's [React Transform Boilerplate](https://github.com/gaearon/react-transform-boilerplate).
 
-## Version
+## Changelog
 
-1.0.0
+*v1.1.0*
+* Added convention for a user supplying their own config.webpack.js
+* Added code-slinger gen-webpack command to generate a webpack file
 
 ## Basic Usage
 
 10 second method:
 
 ```bash
-mkdir react-project
-cd react-project
 npm install -g code-slinger
 code-slinger bootstrap
 code-slinger react-server
@@ -48,13 +48,6 @@ code-slinger build
 ## Deeper usage
 
 ```bash
-# Create folder
-mkdir react-project
-cd react-project
-
-# Create a package.json
-npm init
-
 # Install code-slinger and save it
 npm install --save code-slinger
 
@@ -88,6 +81,17 @@ Want to run a production bundle build?
 npm run build
 ```
 
+Want your own config.webpack.js file to be used?
+
+```bash
+# Optional: generate a config.webpack.js
+./node_modules/.bin/code-slinger gen-webpack
+# Either way make sure you have a config named
+# config.webpack.js in Project Root
+```
+
+*Note: For any arbitrary Webpack config to work with code-slinger: Please replace `__dirname` with `process.cwd()` in the config file*
+
 ## CLI Help
 
 ```
@@ -98,6 +102,8 @@ Commands:
   react-server  Run the hot reloading development server for your project on
                 localhost:8000
   build         Bundle and export your React app to dist/bundle.js
+  gen-webpack   Generates a custom webpack file to be modified for custom
+                Webpack builds.
 
 Options:
   -h, --help  Show help                                                [boolean]
