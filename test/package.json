@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm install ../ && code-slinger bootstrap && code-slinger react-server",
+    "start": "npm run clean && npm install ../ && code-slinger bootstrap && code-slinger gen-webpack && code-slinger react-server",
     "build": "code-slinger build",
-    "clean": "rm .* || : && rm index.html || : && rm -r src || : && rm -r dist || :",
-    "test": "npm run clean && ../app.js bootstrap && ../app.js react-server"
+    "clean": "rimraf config.* .*rc .gitignore index.html src dist",
+    "test": "npm run clean && node ../app.js bootstrap && node ../app.js gen-webpack && node ../app.js react-server"
   },
   "author": "Michael A Tomcal <michael@twoeyetech.com> (https://github.com/mtomcal)",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "rimraf": "^2.5.2"
+  }
 }

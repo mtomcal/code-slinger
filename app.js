@@ -11,6 +11,8 @@ var argv = require('yargs')
     .demand(1)
     .command('build', 'Bundle and export your React app to dist/bundle.js')
     .demand(1)
+    .command('gen-webpack', 'Generates a custom webpack file to be modified for custom Webpack builds.')
+    .demand(1)
     .help('h')
     .alias('h', 'help')
     .epilog('MIT License. Lead Maintainer: Michael A Tomcal @matomcal 2016')
@@ -22,7 +24,7 @@ var argStream = Rx.Observable.fromArray(argv._);
 var serverStream = argStream
     // Filter out commands with react-server
     .filter(function (arg) {
-        return arg === 'react-server';
+      return arg === 'react-server';
     })
     .take(1);
 
@@ -31,7 +33,7 @@ lib.reactServer(serverStream);
 var buildStream = argStream
     // Filter out commands with react-server
     .filter(function (arg) {
-        return arg === 'build';
+      return arg === 'build';
     })
     .take(1);
 
@@ -40,8 +42,17 @@ lib.build(buildStream);
 var bootstrapStream = argStream
     // Filter out commands with bootstrap
     .filter(function (arg) {
-        return arg === 'bootstrap';
+      return arg === 'bootstrap';
     })
     .take(1);
 
 lib.bootstrap(bootstrapStream);
+
+var genWebpackStream = argStream
+    // Filter out commands except for gen-webpack
+    .filter(function (arg) {
+      return arg === 'gen-webpack';
+    })
+    .take(1);
+
+lib.genWebpack(genWebpackStream);
