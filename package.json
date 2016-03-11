@@ -1,6 +1,6 @@
 {
     "name": "code-slinger",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Get your React project up and running in 10 seconds with Webpack hot reloading. Boilerplate code is based on Dan Abramov's React Transform Boilerplate.",
     "main": "app.js",
     "bin": {
